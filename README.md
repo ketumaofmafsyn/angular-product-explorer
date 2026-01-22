@@ -1,7 +1,7 @@
 👤 Author
 
 Moloto Jansen Malema
-Senior / Intermediate Angular Frontend Developer
+Senior / Angular Frontend Developer
 GitHub: https://github.com/ketumaofmafsyn
 
 ---
