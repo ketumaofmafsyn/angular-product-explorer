@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class FavoritesService {
   private readonly STORAGE_KEY = 'favorite_product_ids';
 
-  // Initialize as empty array during SSR; will hydrate from localStorage in browser
+
   private favoritesSignal = signal<number[]>([]);
 
   favorites$ = this.favoritesSignal.asReadonly();
@@ -17,11 +17,11 @@ export class FavoritesService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
 
-    // Only load from localStorage if we're in the browser
+
     if (this.isBrowser) {
       this.favoritesSignal.set(this.loadFromStorage());
 
-      // Persist changes to localStorage (only in browser)
+      
       effect(() => {
         localStorage.setItem(
           this.STORAGE_KEY,

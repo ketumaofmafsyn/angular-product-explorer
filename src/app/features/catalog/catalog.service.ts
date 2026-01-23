@@ -15,7 +15,6 @@ export class CatalogService {
   constructor() {}
 
   getProducts(): Observable<Product[]> {
-    // Simulate network latency
     return of(this.products).pipe(delay(500));
   }
 

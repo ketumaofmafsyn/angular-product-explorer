@@ -25,15 +25,12 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(): void {
     this.catalogService.getProducts()
       .pipe(
-        // Filter products that are in favorites
-        map(products => products.filter(p => 
+        map(products => products.filter(p =>
           this.favoritesService.isFavorite(p.id)
         )),
-        // Update the products array
         tap(filteredProducts => {
           this.products = filteredProducts;
         }),
-        // Set loading to false when complete (whether success or error)
         finalize(() => {
           this.loading = false;
         })

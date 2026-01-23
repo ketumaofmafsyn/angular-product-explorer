@@ -31,12 +31,15 @@
   color: #08732F;
 }
 
-/* Loading spinner */
+/* loading spinner */
 .loading-container {
+  position: fixed;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 2000;
 }
 
 .spinner {
@@ -47,6 +50,7 @@
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
+
 
 @keyframes spin {
   to {
@@ -208,7 +212,6 @@
   white-space: nowrap;
 }
 
-/* Filter container */
 /* Filter container */
 .filter-container {
   display: flex;

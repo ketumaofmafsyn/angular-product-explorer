@@ -32,7 +32,7 @@ export class ProductDetailsComponent implements OnInit {
         next: (res) => {
           this.product = res;
           this.loading.set(false);
-          this.currentImageIndex.set(0); // start with first image
+          this.currentImageIndex.set(0); 
         },
         error: () => this.loading.set(false)
       });

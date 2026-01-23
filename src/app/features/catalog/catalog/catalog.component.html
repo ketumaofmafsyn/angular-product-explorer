@@ -24,7 +24,6 @@
   <!-- Products Grid -->
   <div class="products-grid" *ngIf="!loading() && filteredProducts().length">
     <div *ngFor="let product of filteredProducts()" class="product-card">
-      <!-- Display first image from images array -->
       <img [src]="product.images[0]" [alt]="product.name" class="product-image" />
 
  <!-- Favorite icon -->

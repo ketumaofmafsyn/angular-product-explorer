@@ -45,11 +45,11 @@
     </div>
   </div>
 </div>
-
+ <!-- Loading spinner -->
+ <div *ngIf="loading()" class="loading-container">
+  <div class="spinner"></div>
+  <span class="visually-hidden">Loading...</span>
+</div>
 <ng-template #loadingTpl>
-  <div class="text-center py-5">
-    <div class="spinner-border text-success" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
+
 </ng-template>
